@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>myIcon.ico</normaloff>
+    <normalon>myIcon.ico</normalon>
+    <disabledoff>myIcon.ico</disabledoff>
+    <disabledon>myIcon.ico</disabledon>
+    <activeoff>myIcon.ico</activeoff>
+    <activeon>myIcon.ico</activeon>
+    <selectedoff>myIcon.ico</selectedoff>
+    <selectedon>myIcon.ico</selectedon>myIcon.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel{
+	
+	background-color: rgb(255, 248, 234);
+	
+	font: 10pt &quot;Consolas&quot;;
+}
+QTextEdit{
+	
+	border-image: url(:/myIcon/icon/geometry.ico);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>6</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile_F">
+    <property name="title">
+     <string>File(&amp;F)</string>
+    </property>
+    <addaction name="action_New"/>
+    <addaction name="action_Open"/>
+    <addaction name="action_Close"/>
+    <addaction name="action_Save"/>
+    <addaction name="action_SaveAs"/>
+    <addaction name="action_Exit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit_E">
+    <property name="title">
+     <string>Edit(&amp;E)</string>
+    </property>
+    <addaction name="action_Undo"/>
+    <addaction name="action_Cut"/>
+    <addaction name="action_Copy"/>
+    <addaction name="action_Paste"/>
+    <addaction name="action_Find"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp_H">
+    <property name="title">
+     <string>Help(&amp;H)</string>
+    </property>
+    <addaction name="action_Help"/>
+   </widget>
+   <widget class="QMenu" name="menuFormat_O">
+    <property name="title">
+     <string>Format(&amp;O)</string>
+    </property>
+    <widget class="QMenu" name="menuFont_F">
+     <property name="title">
+      <string>Font(&amp;F)</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="actionBold_B"/>
+     <addaction name="actionKerning_K"/>
+     <addaction name="actionItalic_I"/>
+     <addaction name="actionDFKai"/>
+     <addaction name="actionKai"/>
+     <addaction name="actionSong"/>
+     <addaction name="actionArial"/>
+     <addaction name="actionBerlin_Sans_FB"/>
+     <addaction name="actionBook_Antiqua"/>
+     <addaction name="actionCalibri"/>
+     <addaction name="actionComic_Sans_MS"/>
+     <addaction name="actionConsolas"/>
+     <addaction name="actionConstantia"/>
+     <addaction name="actionForte"/>
+     <addaction name="actionMicrosoft_Accor_Black"/>
+     <addaction name="actionPoor_Richard"/>
+     <addaction name="actionTahoma"/>
+     <addaction name="actionTekton_Pro_Cond"/>
+     <addaction name="actionTimes_New_Roman"/>
+     <addaction name="actionWide_Latin"/>
+    </widget>
+    <widget class="QMenu" name="menuSize_S">
+     <property name="title">
+      <string>Size(&amp;S)</string>
+     </property>
+     <addaction name="action8"/>
+     <addaction name="action9"/>
+     <addaction name="action10"/>
+     <addaction name="action11"/>
+     <addaction name="action12"/>
+     <addaction name="action13"/>
+     <addaction name="action14"/>
+     <addaction name="action15"/>
+     <addaction name="action16"/>
+     <addaction name="action17"/>
+     <addaction name="action18"/>
+     <addaction name="action19"/>
+     <addaction name="action20"/>
+    </widget>
+    <widget class="QMenu" name="menuColor_C">
+     <property name="title">
+      <string>Color(&amp;C)</string>
+     </property>
+     <addaction name="actionBlack_B"/>
+     <addaction name="actionRed_R"/>
+     <addaction name="actionGreen_G"/>
+     <addaction name="actionYellow_Y"/>
+     <addaction name="actionBlue"/>
+     <addaction name="actionGray"/>
+    </widget>
+    <addaction name="menuFont_F"/>
+    <addaction name="menuSize_S"/>
+    <addaction name="menuColor_C"/>
+   </widget>
+   <widget class="QMenu" name="menuRun_R">
+    <property name="title">
+     <string>Run(&amp;R)</string>
+    </property>
+    <addaction name="actionAssemble"/>
+    <addaction name="actionDisassemble_D"/>
+   </widget>
+   <addaction name="menuFile_F"/>
+   <addaction name="menuEdit_E"/>
+   <addaction name="menuFormat_O"/>
+   <addaction name="menuRun_R"/>
+   <addaction name="menuHelp_H"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_New"/>
+   <addaction name="action_Open"/>
+   <addaction name="action_Close"/>
+   <addaction name="action_Save"/>
+   <addaction name="action_SaveAs"/>
+   <addaction name="action_Undo"/>
+   <addaction name="action_Cut"/>
+   <addaction name="action_Copy"/>
+   <addaction name="action_Paste"/>
+   <addaction name="action_Find"/>
+   <addaction name="actionAssemble"/>
+   <addaction name="actionDisassemble_D"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_New">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myIcon/icon/new.ico</normaloff>:/myIcon/icon/new.ico</iconset>
+   </property>
+   <property name="text">
+    <string>New(&amp;N)</string>
+   </property>
+   <property name="statusTip">
+    <string>New file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_Open">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myIcon/icon/open.ico</normaloff>:/myIcon/icon/open.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Open(&amp;O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_Close">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myIcon/icon/close.ico</normaloff>:/myIcon/icon/close.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Close(&amp;C)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myIcon/icon/save.ico</normaloff>:/myIcon/icon/save.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Save(&amp;S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_SaveAs">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myIcon/icon/saveAs.ico</normaloff>:/myIcon/icon/saveAs.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Save as(&amp;A)</string>
+   </property>
+  </action>
+  <action name="action_Exit">
+   <property name="text">
+    <string>Exit(&amp;X)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_Undo">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myIcon/icon/undo.ico</normaloff>:/myIcon/icon/undo.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Undo(&amp;Z)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="action_Cut">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myIcon/icon/cut.ico</normaloff>:/myIcon/icon/cut.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Cut(&amp;X)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="action_Copy">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myIcon/icon/copy.ico</normaloff>:/myIcon/icon/copy.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Copy(&amp;C)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_Paste">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myIcon/icon/paste.ico</normaloff>:/myIcon/icon/paste.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Paste(&amp;V)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="action_Find">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myIcon/icon/search.ico</normaloff>:/myIcon/icon/search.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Find(&amp;F)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="action_Help">
+   <property name="text">
+    <string>Imprint</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionBold_B">
+   <property name="text">
+    <string>Bold</string>
+   </property>
+  </action>
+  <action name="actionKerning_K">
+   <property name="text">
+    <string>Kerning</string>
+   </property>
+  </action>
+  <action name="actionItalic_I">
+   <property name="text">
+    <string>Italic</string>
+   </property>
+  </action>
+  <action name="action8">
+   <property name="text">
+    <string>8</string>
+   </property>
+  </action>
+  <action name="action9">
+   <property name="text">
+    <string>9</string>
+   </property>
+  </action>
+  <action name="action10">
+   <property name="text">
+    <string>10</string>
+   </property>
+  </action>
+  <action name="action11">
+   <property name="text">
+    <string>11</string>
+   </property>
+  </action>
+  <action name="action12">
+   <property name="text">
+    <string>12</string>
+   </property>
+  </action>
+  <action name="action13">
+   <property name="text">
+    <string>13</string>
+   </property>
+  </action>
+  <action name="action14">
+   <property name="text">
+    <string>14</string>
+   </property>
+  </action>
+  <action name="action15">
+   <property name="text">
+    <string>15</string>
+   </property>
+  </action>
+  <action name="action16">
+   <property name="text">
+    <string>16</string>
+   </property>
+  </action>
+  <action name="action17">
+   <property name="text">
+    <string>17</string>
+   </property>
+  </action>
+  <action name="action18">
+   <property name="text">
+    <string>18</string>
+   </property>
+  </action>
+  <action name="action19">
+   <property name="text">
+    <string>19</string>
+   </property>
+  </action>
+  <action name="action20">
+   <property name="text">
+    <string>20</string>
+   </property>
+  </action>
+  <action name="actionRed_R">
+   <property name="text">
+    <string>Red</string>
+   </property>
+  </action>
+  <action name="actionGreen_G">
+   <property name="text">
+    <string>Green</string>
+   </property>
+  </action>
+  <action name="actionYellow_Y">
+   <property name="text">
+    <string>Yellow</string>
+   </property>
+  </action>
+  <action name="actionBlack_B">
+   <property name="text">
+    <string>Black</string>
+   </property>
+  </action>
+  <action name="actionBlue">
+   <property name="text">
+    <string>Blue</string>
+   </property>
+  </action>
+  <action name="actionGray">
+   <property name="text">
+    <string>Gray</string>
+   </property>
+  </action>
+  <action name="actionSong">
+   <property name="text">
+    <string>Song</string>
+   </property>
+  </action>
+  <action name="actionConsolas">
+   <property name="text">
+    <string>Consolas</string>
+   </property>
+  </action>
+  <action name="actionCalibri">
+   <property name="text">
+    <string>Calibri</string>
+   </property>
+  </action>
+  <action name="actionKai">
+   <property name="text">
+    <string>Kai</string>
+   </property>
+  </action>
+  <action name="actionComic_Sans_MS">
+   <property name="text">
+    <string>Comic Sans MS</string>
+   </property>
+  </action>
+  <action name="actionArial">
+   <property name="text">
+    <string>Arial</string>
+   </property>
+  </action>
+  <action name="actionConstantia">
+   <property name="text">
+    <string>Constantia</string>
+   </property>
+  </action>
+  <action name="actionBerlin_Sans_FB">
+   <property name="text">
+    <string>Berlin Sans FB</string>
+   </property>
+  </action>
+  <action name="actionMicrosoft_Accor_Black">
+   <property name="text">
+    <string>Microsoft Accor Black</string>
+   </property>
+  </action>
+  <action name="actionTekton_Pro_Cond">
+   <property name="text">
+    <string>Tekton Pro Cond</string>
+   </property>
+  </action>
+  <action name="actionPoor_Richard">
+   <property name="text">
+    <string>Poor Richard</string>
+   </property>
+  </action>
+  <action name="actionForte">
+   <property name="text">
+    <string>Forte</string>
+   </property>
+  </action>
+  <action name="actionBook_Antiqua">
+   <property name="text">
+    <string>Book Antiqua</string>
+   </property>
+  </action>
+  <action name="actionTimes_New_Roman">
+   <property name="text">
+    <string>Times New Roman</string>
+   </property>
+  </action>
+  <action name="actionTahoma">
+   <property name="text">
+    <string>Tahoma</string>
+   </property>
+  </action>
+  <action name="actionWide_Latin">
+   <property name="text">
+    <string>Wide Latin</string>
+   </property>
+  </action>
+  <action name="actionDFKai">
+   <property name="text">
+    <string>DFKai-SB</string>
+   </property>
+  </action>
+  <action name="actionAssemble">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myIcon/icon/assemble.ico</normaloff>:/myIcon/icon/assemble.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Assemble(&amp;A)</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionDisassemble_D">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myIcon/icon/disassemble.ico</normaloff>:/myIcon/icon/disassemble.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Disassemble(&amp;D)</string>
+   </property>
+   <property name="shortcut">
+    <string>F6</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="myicon.qrc"/>
+ </resources>
+ <connections/>
+</ui>
